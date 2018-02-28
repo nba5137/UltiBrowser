@@ -135,7 +135,7 @@ namespace UltiBrowser
         private void button1_Click(object sender, EventArgs e)
         {
             // Add form2 as bookmarks window. 
-            Form2 add_bookmark = new Form2();
+            Form2 add_bookmark = new Form2(this);
             add_bookmark.Show();
         }
 
@@ -145,9 +145,22 @@ namespace UltiBrowser
          * Bookmark = Dict
          * Bookmarks = menustrip
          * 
-         * 
          */
+
+        /*
         private void Bookmarks_Click(object sender, EventArgs e)
+        {
+            //Moved to Add_pages function.
+        }
+        */
+
+        /// <summary>
+        /// Add_pages function. will be called by "Add" button in form2. 
+        /// Did not implement it in form2, since modify data from another form is complicated.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Add_pages()
         {
             for (int i = 0; i < Bookmark.Count; i++)
             {
