@@ -12,9 +12,11 @@ namespace UltiBrowser
 {
     public partial class Form2 : Form
     {
+        public List<Form1.Bookmark> bookmarks;
         public Form2()
         {
             InitializeComponent();
+            
         }
 
 
@@ -22,6 +24,12 @@ namespace UltiBrowser
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        
+        // Add case
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

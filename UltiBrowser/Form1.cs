@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Web;
 
 namespace UltiBrowser
 {
@@ -94,18 +93,33 @@ namespace UltiBrowser
         }
 
         /// <summary>
-        /// Backward & Forward buttons. 
+        /// Functional buttons. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        
+        // Backward
         private void backward_Click(object sender, EventArgs e)
         {
             webBrowser1.GoBack();
         }
 
+        // Forward
         private void forward_Click(object sender, EventArgs e)
         {
             webBrowser1.GoForward();
+        }
+
+        // Refresh
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Refresh();
+        }
+
+        // Homepage
+        private void home_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoHome();
         }
 
         /// <summary>
@@ -114,8 +128,19 @@ namespace UltiBrowser
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
+        //Setup class for bookmarks
+        public class Bookmark
+        {
+            public int ID { get; set; }
+            public string Name { get; set; }
+            public string url { get; set; }
+        }
+        // Create a list for bookmarks.
+        public List<Bookmark> bookmarks = new List<Bookmark>();
+
         private void button1_Click(object sender, EventArgs e)
         {
+            // Add form2 as bookmarks window. 
             Form2 add_bookmark = new Form2();
             add_bookmark.Show();
         }

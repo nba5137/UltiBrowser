@@ -42,6 +42,8 @@ namespace UltiBrowser
             this.backward = new System.Windows.Forms.Button();
             this.forward = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.refresh = new System.Windows.Forms.Button();
+            this.home = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +52,7 @@ namespace UltiBrowser
             // 
             this.access.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.access.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.access.Location = new System.Drawing.Point(597, 39);
+            this.access.Location = new System.Drawing.Point(942, 39);
             this.access.Name = "access";
             this.access.Size = new System.Drawing.Size(88, 28);
             this.access.TabIndex = 0;
@@ -67,7 +69,7 @@ namespace UltiBrowser
             this.aboutToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(697, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1042, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,9 +106,9 @@ namespace UltiBrowser
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(112, 38);
+            this.textBox1.Location = new System.Drawing.Point(222, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(478, 30);
+            this.textBox1.Size = new System.Drawing.Size(713, 30);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "http://";
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -119,7 +121,7 @@ namespace UltiBrowser
             this.webBrowser1.Location = new System.Drawing.Point(12, 87);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(673, 298);
+            this.webBrowser1.Size = new System.Drawing.Size(1018, 312);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
@@ -130,9 +132,9 @@ namespace UltiBrowser
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 402);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 416);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(697, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1042, 26);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -170,8 +172,9 @@ namespace UltiBrowser
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(484, 2);
+            this.button1.Location = new System.Drawing.Point(829, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 30);
             this.button1.TabIndex = 7;
@@ -179,11 +182,33 @@ namespace UltiBrowser
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // refresh
+            // 
+            this.refresh.Location = new System.Drawing.Point(112, 40);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(74, 25);
+            this.refresh.TabIndex = 8;
+            this.refresh.Text = "Refresh";
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
+            // home
+            // 
+            this.home.Location = new System.Drawing.Point(192, 40);
+            this.home.Name = "home";
+            this.home.Size = new System.Drawing.Size(25, 25);
+            this.home.TabIndex = 9;
+            this.home.Text = "H";
+            this.home.UseVisualStyleBackColor = true;
+            this.home.Click += new System.EventHandler(this.home_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 428);
+            this.ClientSize = new System.Drawing.Size(1042, 442);
+            this.Controls.Add(this.home);
+            this.Controls.Add(this.refresh);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.forward);
             this.Controls.Add(this.backward);
@@ -220,6 +245,8 @@ namespace UltiBrowser
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Bookmarks;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button refresh;
+        private System.Windows.Forms.Button home;
     }
 }
 
