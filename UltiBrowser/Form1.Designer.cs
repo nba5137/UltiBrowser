@@ -30,7 +30,9 @@ namespace UltiBrowser
         {
             this.access = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Bookmarks = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -39,8 +41,7 @@ namespace UltiBrowser
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.backward = new System.Windows.Forms.Button();
             this.forward = new System.Windows.Forms.Button();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,7 @@ namespace UltiBrowser
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
+            this.Bookmarks,
             this.optionsToolStripMenuItem,
             this.aboutToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -70,6 +71,12 @@ namespace UltiBrowser
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // Bookmarks
+            // 
+            this.Bookmarks.Name = "Bookmarks";
+            this.Bookmarks.Size = new System.Drawing.Size(94, 24);
+            this.Bookmarks.Text = "Bookmarks";
+            // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -77,6 +84,13 @@ namespace UltiBrowser
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.optionsToolStripMenuItem.Text = "Options";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem1
             // 
@@ -154,25 +168,23 @@ namespace UltiBrowser
             this.forward.UseVisualStyleBackColor = true;
             this.forward.Click += new System.EventHandler(this.forward_Click);
             // 
-            // exitToolStripMenuItem
+            // button1
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(73, 24);
-            this.toolStripMenuItem1.Text = "Favorite";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(484, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 30);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Add to Bookmarks";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 428);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.forward);
             this.Controls.Add(this.backward);
             this.Controls.Add(this.statusStrip1);
@@ -206,7 +218,8 @@ namespace UltiBrowser
         private System.Windows.Forms.Button backward;
         private System.Windows.Forms.Button forward;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem Bookmarks;
+        private System.Windows.Forms.Button button1;
     }
 }
 

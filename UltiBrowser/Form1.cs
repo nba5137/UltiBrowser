@@ -108,9 +108,17 @@ namespace UltiBrowser
             webBrowser1.GoForward();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+        /// <summary>
+        /// Bookmarks case
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 add_bookmark = new Form2();
+            add_bookmark.Show();
         }
+
     }
 }

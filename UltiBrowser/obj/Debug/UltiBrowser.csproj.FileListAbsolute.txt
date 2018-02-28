@@ -16,3 +16,4 @@ C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrow
 C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.csproj.GenerateResource.Cache
 C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\bin\Debug\UltiBrowser.exe
 C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\bin\Debug\UltiBrowser.pdb
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.Form2.resources
