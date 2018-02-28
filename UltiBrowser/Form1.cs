@@ -17,10 +17,10 @@ namespace UltiBrowser
             InitializeComponent();
         }
 
-        // Button - Access
+        // Button - Access the index input in textBox1. 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            webBrowser1.Navigate(textBox1.Text);
         }
 
         // Option - Exit
@@ -33,7 +33,7 @@ namespace UltiBrowser
         // Menu - About
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Simple web browser built in C# by Sibo Song. ")
+            MessageBox.Show("Simple web browser built in C# by Sibo Song. ");
         }
 
     }

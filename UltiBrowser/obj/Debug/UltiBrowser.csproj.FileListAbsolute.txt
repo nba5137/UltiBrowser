@@ -7,3 +7,12 @@ c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrows
 c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.exe
 c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.pdb
 c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.Form1.resources
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\bin\Debug\UltiBrowser.exe.config
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.exe
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.pdb
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.csprojResolveAssemblyReference.cache
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.Form1.resources
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.Properties.Resources.resources
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.csproj.GenerateResource.Cache
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\bin\Debug\UltiBrowser.exe
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\bin\Debug\UltiBrowser.pdb
