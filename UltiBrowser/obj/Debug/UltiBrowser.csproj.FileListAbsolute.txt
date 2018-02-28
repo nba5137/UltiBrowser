@@ -1,0 +1,9 @@
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\bin\Debug\UltiBrowser.exe.config
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\bin\Debug\UltiBrowser.exe
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\bin\Debug\UltiBrowser.pdb
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.csprojResolveAssemblyReference.cache
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.Properties.Resources.resources
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.csproj.GenerateResource.Cache
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.exe
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.pdb
+c:\users\nba51\onedrive\文档\visual studio 2015\Projects\UltiBrowser\UltiBrowser\obj\Debug\UltiBrowser.Form1.resources
