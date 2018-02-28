@@ -31,6 +31,8 @@ namespace UltiBrowser
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+            // Enable add button after closing form2. 
+            this._f1.Renable();
         }
 
         /// <summary>
@@ -46,6 +48,8 @@ namespace UltiBrowser
             // Calling Add_pages function in form 1. 
             this._f1.Add_pages();
             this.Close();
+            // Enable add button after closing form2. 
+            this._f1.Renable();
         }
     }
 }

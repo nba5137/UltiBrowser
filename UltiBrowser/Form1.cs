@@ -137,6 +137,8 @@ namespace UltiBrowser
             // Add form2 as bookmarks window. 
             Form2 add_bookmark = new Form2(this);
             add_bookmark.Show();
+            // Disable this button once form2 open. 
+            button1.Enabled = false;
         }
 
 
@@ -200,6 +202,13 @@ namespace UltiBrowser
                     Bookmarks.DropDownItems[0].Click += new EventHandler(Check_Dict);
                 }
             }
+        }
+
+        // Renable add button function
+        public void Renable()
+        {
+            // Enable add button after closing form2. 
+            button1.Enabled = true;
         }
 
         /// <summary>
