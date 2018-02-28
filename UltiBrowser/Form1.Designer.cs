@@ -78,7 +78,6 @@ namespace UltiBrowser
             this.Bookmarks.Name = "Bookmarks";
             this.Bookmarks.Size = new System.Drawing.Size(94, 24);
             this.Bookmarks.Text = "Bookmarks";
-            this.Bookmarks.Click += new System.EventHandler(this.Bookmarks_Click);
             // 
             // optionsToolStripMenuItem
             // 
