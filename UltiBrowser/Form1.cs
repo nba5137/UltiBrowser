@@ -45,10 +45,11 @@ namespace UltiBrowser
         // Button - Access the index input in textBox1. 
         private void Access()
         {
+            toolStripStatusLabel1.Text = "Loading...";
             webBrowser1.Navigate(textBox1.Text);
         }
             
-        private void button1_Click(object sender, EventArgs e)
+        private void access_Click(object sender, EventArgs e)
         {
             Access();
         }
@@ -72,8 +73,24 @@ namespace UltiBrowser
             // To avoid zero error. 
             if (e.CurrentProgress > 0 && e.MaximumProgress > 0)
             {
-                toolStripProgressBar1.ProgressBar.Value = int(e.CurrentProgress * 100 / e.MaximumProgress);
+                toolStripProgressBar1.ProgressBar.Value = (int)(e.CurrentProgress / e.MaximumProgress * 100);
             }
+        }
+
+        // Reset loading bar. 
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Loading Completed";
+        }
+
+        private void backward_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forward_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
