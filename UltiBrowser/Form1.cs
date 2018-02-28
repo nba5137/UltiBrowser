@@ -85,13 +85,6 @@ namespace UltiBrowser
         }
 
         // Actions once complete loading.
-        /*  
-         * Setting string variables for backward and forward buttons. 
-         * 0 is current index. 
-         * 1 is index where gonna return to.
-         * 
-         */
-
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             toolStripStatusLabel1.Text = "Loading Completed";
@@ -100,6 +93,11 @@ namespace UltiBrowser
             textBox1.Text = index;
         }
 
+        /// <summary>
+        /// Backward & Forward buttons. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backward_Click(object sender, EventArgs e)
         {
             webBrowser1.GoBack();
@@ -110,5 +108,9 @@ namespace UltiBrowser
             webBrowser1.GoForward();
         }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
