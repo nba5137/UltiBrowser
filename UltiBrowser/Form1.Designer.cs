@@ -31,8 +31,6 @@ namespace UltiBrowser
             this.access = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
@@ -41,6 +39,7 @@ namespace UltiBrowser
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.backward = new System.Windows.Forms.Button();
             this.forward = new System.Windows.Forms.Button();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +47,10 @@ namespace UltiBrowser
             // access
             // 
             this.access.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.access.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.access.Location = new System.Drawing.Point(577, 31);
+            this.access.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.access.Location = new System.Drawing.Point(597, 39);
             this.access.Name = "access";
-            this.access.Size = new System.Drawing.Size(108, 22);
+            this.access.Size = new System.Drawing.Size(88, 28);
             this.access.TabIndex = 0;
             this.access.Text = "Access";
             this.access.UseVisualStyleBackColor = true;
@@ -72,24 +71,10 @@ namespace UltiBrowser
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.exitToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.optionsToolStripMenuItem.Text = "Options";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
-            this.aboutToolStripMenuItem.Text = "About";
             // 
             // aboutToolStripMenuItem1
             // 
@@ -102,9 +87,10 @@ namespace UltiBrowser
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 31);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(112, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(559, 22);
+            this.textBox1.Size = new System.Drawing.Size(478, 30);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "http://";
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -147,9 +133,9 @@ namespace UltiBrowser
             // 
             // backward
             // 
-            this.backward.Location = new System.Drawing.Point(12, 58);
+            this.backward.Location = new System.Drawing.Point(15, 40);
             this.backward.Name = "backward";
-            this.backward.Size = new System.Drawing.Size(75, 23);
+            this.backward.Size = new System.Drawing.Size(40, 25);
             this.backward.TabIndex = 5;
             this.backward.Text = "<<<";
             this.backward.UseVisualStyleBackColor = true;
@@ -157,13 +143,20 @@ namespace UltiBrowser
             // 
             // forward
             // 
-            this.forward.Location = new System.Drawing.Point(93, 59);
+            this.forward.Location = new System.Drawing.Point(64, 40);
             this.forward.Name = "forward";
-            this.forward.Size = new System.Drawing.Size(75, 23);
+            this.forward.Size = new System.Drawing.Size(40, 25);
             this.forward.TabIndex = 6;
             this.forward.Text = ">>>";
             this.forward.UseVisualStyleBackColor = true;
             this.forward.Click += new System.EventHandler(this.forward_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -194,8 +187,6 @@ namespace UltiBrowser
         private System.Windows.Forms.Button access;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.WebBrowser webBrowser1;
@@ -204,6 +195,7 @@ namespace UltiBrowser
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Button backward;
         private System.Windows.Forms.Button forward;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
