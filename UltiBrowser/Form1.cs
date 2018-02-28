@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web;
 
 namespace UltiBrowser
 {
@@ -73,24 +74,41 @@ namespace UltiBrowser
             // To avoid zero error. 
             if (e.CurrentProgress > 0 && e.MaximumProgress > 0)
             {
-                toolStripProgressBar1.ProgressBar.Value = (int)(e.CurrentProgress / e.MaximumProgress * 100);
+                int Progress_Value = (int)(e.CurrentProgress / e.MaximumProgress * 100);
+                //exceed issue proof. 
+                if (Progress_Value >= 100 )
+                {
+                    Progress_Value = 100;
+                }
+                toolStripProgressBar1.ProgressBar.Value = Progress_Value;
             }
         }
 
-        // Reset loading bar. 
+        // Actions once complete loading.
+        /*  
+         * Setting string variables for backward and forward buttons. 
+         * 0 is current index. 
+         * 1 is index where gonna return to.
+         * 
+         */
+
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             toolStripStatusLabel1.Text = "Loading Completed";
+            // Update index input box - textBox1. 
+            string index = (webBrowser1.Url).ToString();
+            textBox1.Text = index;
         }
 
         private void backward_Click(object sender, EventArgs e)
         {
-
+            webBrowser1.GoBack();
         }
 
         private void forward_Click(object sender, EventArgs e)
         {
-
+            webBrowser1.GoForward();
         }
+
     }
 }
