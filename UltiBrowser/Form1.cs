@@ -17,11 +17,11 @@ namespace UltiBrowser
             InitializeComponent();
         }
 
-        // Button - Access the index input in textBox1. 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            webBrowser1.Navigate(textBox1.Text);
-        }
+        /// <summary>
+        /// Menu issues
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         // Option - Exit
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,5 +36,44 @@ namespace UltiBrowser
             MessageBox.Show("Simple web browser built in C# by Sibo Song. ");
         }
 
+        /// <summary>
+        /// Web index Access issues
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        // Button - Access the index input in textBox1. 
+        private void Access()
+        {
+            webBrowser1.Navigate(textBox1.Text);
+        }
+            
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Access();
+        }
+
+        // Press 'Enter' in textBox1 to access a website. 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)ConsoleKey.Enter)
+            {
+                Access();
+            }
+        }
+
+        /// <summary>
+        /// Loading Progress issues. Loading bar etc.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
+        {
+            // To avoid zero error. 
+            if (e.CurrentProgress > 0 && e.MaximumProgress > 0)
+            {
+                toolStripProgressBar1.ProgressBar.Value = int(e.CurrentProgress * 100 / e.MaximumProgress);
+            }
+        }
     }
 }

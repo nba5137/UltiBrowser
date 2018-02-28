@@ -104,6 +104,7 @@ namespace UltiBrowser
             this.textBox1.Size = new System.Drawing.Size(539, 22);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "http://";
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // webBrowser1
             // 
@@ -115,6 +116,7 @@ namespace UltiBrowser
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(673, 298);
             this.webBrowser1.TabIndex = 3;
+            this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
             // 
             // statusStrip1
             // 
