@@ -52,7 +52,7 @@ namespace UltiBrowser
             // 
             this.access.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.access.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.access.Location = new System.Drawing.Point(942, 39);
+            this.access.Location = new System.Drawing.Point(932, 39);
             this.access.Name = "access";
             this.access.Size = new System.Drawing.Size(88, 28);
             this.access.TabIndex = 0;
@@ -69,7 +69,7 @@ namespace UltiBrowser
             this.aboutToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1042, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1032, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -110,7 +110,7 @@ namespace UltiBrowser
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox1.Location = new System.Drawing.Point(222, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(713, 30);
+            this.textBox1.Size = new System.Drawing.Size(703, 30);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "http://";
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -123,7 +123,7 @@ namespace UltiBrowser
             this.webBrowser1.Location = new System.Drawing.Point(12, 87);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1018, 312);
+            this.webBrowser1.Size = new System.Drawing.Size(1008, 373);
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
@@ -134,9 +134,9 @@ namespace UltiBrowser
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 416);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 477);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1042, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1032, 26);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -207,7 +207,7 @@ namespace UltiBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 442);
+            this.ClientSize = new System.Drawing.Size(1032, 503);
             this.Controls.Add(this.home);
             this.Controls.Add(this.refresh);
             this.Controls.Add(this.button1);
@@ -219,7 +219,9 @@ namespace UltiBrowser
             this.Controls.Add(this.access);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(675, 455);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UltiBrowser";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -87,7 +87,7 @@ namespace UltiBrowser
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(135, 104);
+            this.button1.Location = new System.Drawing.Point(135, 105);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 35);
             this.button1.TabIndex = 4;
@@ -99,7 +99,7 @@ namespace UltiBrowser
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(336, 104);
+            this.button2.Location = new System.Drawing.Point(336, 105);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 35);
             this.button2.TabIndex = 5;
@@ -111,15 +111,20 @@ namespace UltiBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 147);
+            this.ClientSize = new System.Drawing.Size(567, 148);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Bm_name);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(585, 195);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(585, 195);
             this.Name = "Form2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add to Bookmarks";
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
