@@ -44,6 +44,7 @@ namespace UltiBrowser
             this.button1 = new System.Windows.Forms.Button();
             this.refresh = new System.Windows.Forms.Button();
             this.home = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +76,7 @@ namespace UltiBrowser
             // 
             // Bookmarks
             // 
+            this.Bookmarks.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.Bookmarks.Name = "Bookmarks";
             this.Bookmarks.Size = new System.Drawing.Size(94, 24);
             this.Bookmarks.Text = "Bookmarks";
@@ -142,6 +144,7 @@ namespace UltiBrowser
             // 
             // toolStripProgressBar1
             // 
+            this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(8, 3, 1, 3);
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(200, 20);
             // 
@@ -175,9 +178,9 @@ namespace UltiBrowser
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(109, 3);
+            this.button1.Location = new System.Drawing.Point(112, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 25);
+            this.button1.Size = new System.Drawing.Size(200, 25);
             this.button1.TabIndex = 7;
             this.button1.Text = "Add to Bookmarks";
             this.button1.UseVisualStyleBackColor = true;
@@ -203,11 +206,22 @@ namespace UltiBrowser
             this.home.UseVisualStyleBackColor = true;
             this.home.Click += new System.EventHandler(this.home_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(320, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 25);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Set Homepage";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 503);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.home);
             this.Controls.Add(this.refresh);
             this.Controls.Add(this.button1);
@@ -250,6 +264,7 @@ namespace UltiBrowser
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button refresh;
         private System.Windows.Forms.Button home;
+        private System.Windows.Forms.Button button2;
     }
 }
 

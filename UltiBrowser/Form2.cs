@@ -40,16 +40,38 @@ namespace UltiBrowser
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-
-        private void button1_Click(object sender, EventArgs e)
+        private void add_case()
         {
             Form1.Bookmark.Add(Bm_name.Text, textBox1.Text);
-            
             // Calling Add_pages function in form 1. 
             this._f1.Add_pages();
             this.Close();
             // Enable add button after closing form2. 
             this._f1.Renable();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            add_case();
+        }
+
+        private void Bm_name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)ConsoleKey.Enter)
+            {
+                add_case();
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)ConsoleKey.Enter)
+            {
+                add_case();
+            }
+        }
+
+        // Press Enter in any textbox will go to add case. 
+
     }
 }
