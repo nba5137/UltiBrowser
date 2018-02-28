@@ -84,11 +84,12 @@ namespace UltiBrowser
         }
 
         // Actions once complete loading.
+        public static string index;
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             toolStripStatusLabel1.Text = "Loading Completed";
             // Update index input box - textBox1. 
-            string index = (webBrowser1.Url).ToString();
+            index = (webBrowser1.Url).ToString();
             textBox1.Text = index;
         }
 
@@ -128,15 +129,8 @@ namespace UltiBrowser
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-        //Setup class for bookmarks
-        public class Bookmark
-        {
-            public int ID { get; set; }
-            public string Name { get; set; }
-            public string url { get; set; }
-        }
-        // Create a list for bookmarks.
-        public List<Bookmark> bookmarks = new List<Bookmark>();
+        //Setup Dict for bookmarks
+        public static Dictionary<string, string> Bookmark = new Dictionary<string, string>();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -145,5 +139,50 @@ namespace UltiBrowser
             add_bookmark.Show();
         }
 
+
+        // Update bookmarks by clicking Bookmarks button
+        /*
+         * Bookmark = Dict
+         * Bookmarks = menustrip
+         * 
+         * 
+         */
+        private void Bookmarks_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Bookmark.Count; i++)
+            {
+                string new_item = Bookmark.Keys.ElementAt(i);
+                // Check repeated items
+                if (Bookmarks.HasDropDownItems)
+                {
+                    int count = 0;
+                    bool repeat = false;
+                    foreach (ToolStripMenuItem DropDownItem in Bookmarks.DropDownItems)
+                    {
+                        count = count + 1;
+                    }
+                    for (int j = 0; j < count; j++)
+                    {
+                        if (Bookmarks.DropDownItems[j].Text == new_item)
+                        {
+                            repeat = true;
+                            break;
+                        }
+                    }
+                    if (repeat == false)
+                    {
+                        Bookmarks.DropDownItems.Add(new_item);
+                    }
+                    else
+                    {
+                        repeat = false;
+                    }
+                }
+                else
+                {
+                    Bookmarks.DropDownItems.Add(new_item);
+                }
+            }
+        }
     }
 }

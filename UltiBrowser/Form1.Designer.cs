@@ -78,9 +78,11 @@ namespace UltiBrowser
             this.Bookmarks.Name = "Bookmarks";
             this.Bookmarks.Size = new System.Drawing.Size(94, 24);
             this.Bookmarks.Text = "Bookmarks";
+            this.Bookmarks.Click += new System.EventHandler(this.Bookmarks_Click);
             // 
             // optionsToolStripMenuItem
             // 
+            this.optionsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
@@ -96,6 +98,7 @@ namespace UltiBrowser
             // 
             // aboutToolStripMenuItem1
             // 
+            this.aboutToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(62, 24);
             this.aboutToolStripMenuItem1.Text = "About";
@@ -172,11 +175,10 @@ namespace UltiBrowser
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(829, 2);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(109, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 30);
+            this.button1.Size = new System.Drawing.Size(201, 25);
             this.button1.TabIndex = 7;
             this.button1.Text = "Add to Bookmarks";
             this.button1.UseVisualStyleBackColor = true;
