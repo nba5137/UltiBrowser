@@ -185,20 +185,38 @@ namespace UltiBrowser
                     if (repeat == false)
                     {
                         Bookmarks.DropDownItems.Add(new_item);
+                        // after added new item, add click event to it. 
+                        Bookmarks.DropDownItems[count].Click += new EventHandler(Check_Dict);
                     }
                     else
                     {
                         repeat = false;
                     }
+                    
                 }
                 else
                 {
                     Bookmarks.DropDownItems.Add(new_item);
+                    Bookmarks.DropDownItems[0].Click += new EventHandler(Check_Dict);
                 }
             }
         }
 
-        
-
+        /// <summary>
+        /// Check_Dict function. Used as checking index according to bookmark name.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Check_Dict(object sender, EventArgs e)
+        {
+            ToolStripMenuItem key = (ToolStripMenuItem)sender;
+            for (int i = 0; i < Bookmark.Count; i++)
+            {
+                if (key.Text == Bookmark.Keys.ElementAt(i))
+                {
+                    webBrowser1.Navigate(Bookmark[Bookmark.Keys.ElementAt(i)]);
+                }
+            }
+        }
     }
 }
