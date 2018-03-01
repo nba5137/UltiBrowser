@@ -7,14 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Web.Script.Serialization;
 
 namespace UltiBrowser
 {
     public partial class Form1 : Form
     {
+        //Setup Dict for bookmarks
+        public static Dictionary<string, string> Bookmark = new Dictionary<string, string>();
+
         public Form1()
         {
             InitializeComponent();
+            // Creating a file for storing 
+            if (!File.Exists("fav"))
+            {
+                System.IO.FileStream newfile = System.IO.File.Create("fav");
+                newfile.Close();
+            }
+            // Reading from the file
+            Bookmark = new JavaScriptSerializer()
+                .Deserialize<Dictionary<string, string>>(File.ReadAllText("fav"));
+            // Adding to menustripitem 
+            Add_pages();
         }
 
         /// <summary>
@@ -140,9 +156,6 @@ namespace UltiBrowser
         /// <param name="sender"></param>
         /// <param name="e"></param>
 
-        //Setup Dict for bookmarks
-        public static Dictionary<string, string> Bookmark = new Dictionary<string, string>();
-
         private void button1_Click(object sender, EventArgs e)
         {
             // Add form2 as bookmarks window. 
@@ -175,6 +188,10 @@ namespace UltiBrowser
         /// <param name="e"></param>
         public void Add_pages()
         {
+            if (Bookmark == null)
+            {
+                return;
+            }
             for (int i = 0; i < Bookmark.Count; i++)
             {
                 string new_item = Bookmark.Keys.ElementAt(i);
@@ -213,6 +230,8 @@ namespace UltiBrowser
                     Bookmarks.DropDownItems[0].Click += new EventHandler(Check_Dict);
                 }
             }
+            // Writing into the file "fav" for storing  
+            File.WriteAllText("fav", new JavaScriptSerializer().Serialize(Bookmark));
         }
 
         // Renable add button function
