@@ -12,6 +12,19 @@ namespace UltiBrowser
 {
     public partial class Form2 : Form
     {
+        // Disable close button. 
+        // Method from https://stackoverflow.com/questions/7301825/windows-forms-how-to-hide-close-x-button
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
         // In order to call Add_pages function in form 1.
         // Going to create a new form1 for storage & use. 
         private readonly Form1 _f1;
@@ -42,12 +55,19 @@ namespace UltiBrowser
         /// <param name="e"></param>
         private void add_case()
         {
-            Form1.Bookmark.Add(Bm_name.Text, textBox1.Text);
-            // Calling Add_pages function in form 1. 
-            this._f1.Add_pages();
-            this.Close();
-            // Enable add button after closing form2. 
-            this._f1.Renable();
+            if (!Form1.Bookmark.ContainsKey(Bm_name.Text))
+            {
+                Form1.Bookmark.Add(Bm_name.Text, textBox1.Text);
+                // Calling Add_pages function in form 1. 
+                this._f1.Add_pages();
+                this.Close();
+                // Enable add button after closing form2. 
+                this._f1.Renable();
+            }
+            else
+            {
+                MessageBox.Show("Please use another name for this bookmark. ");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

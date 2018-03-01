@@ -179,7 +179,7 @@ namespace UltiBrowser
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(112, 3);
+            this.button1.Location = new System.Drawing.Point(122, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 28);
             this.button1.TabIndex = 7;
@@ -210,7 +210,7 @@ namespace UltiBrowser
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(320, 3);
+            this.button2.Location = new System.Drawing.Point(330, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 28);
             this.button2.TabIndex = 10;

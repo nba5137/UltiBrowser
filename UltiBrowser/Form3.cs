@@ -12,6 +12,19 @@ namespace UltiBrowser
 {
     public partial class Form3 : Form
     {
+        // Disable close button. 
+        // Method from https://stackoverflow.com/questions/7301825/windows-forms-how-to-hide-close-x-button
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
         private readonly Form1 _f1;
 
         public Form3(Form1 f1)
@@ -40,6 +53,14 @@ namespace UltiBrowser
             {
                 setting();
             }
+        }
+
+        // Quit case
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            // Enable add button after closing form2. 
+            this._f1.Renable_2();
         }
     }
 }

@@ -48,9 +48,9 @@ namespace UltiBrowser
             this.Bm_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Bm_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Bm_name.Location = new System.Drawing.Point(105, 26);
+            this.Bm_name.Location = new System.Drawing.Point(123, 24);
             this.Bm_name.Name = "Bm_name";
-            this.Bm_name.Size = new System.Drawing.Size(435, 34);
+            this.Bm_name.Size = new System.Drawing.Size(372, 34);
             this.Bm_name.TabIndex = 0;
             this.Bm_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Bm_name_KeyPress);
             // 
@@ -58,7 +58,7 @@ namespace UltiBrowser
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(21, 29);
+            this.label1.Location = new System.Drawing.Point(39, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 29);
             this.label1.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace UltiBrowser
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(21, 67);
+            this.label2.Location = new System.Drawing.Point(39, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 29);
             this.label2.TabIndex = 2;
@@ -79,9 +79,9 @@ namespace UltiBrowser
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox1.Location = new System.Drawing.Point(105, 64);
+            this.textBox1.Location = new System.Drawing.Point(123, 62);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(435, 34);
+            this.textBox1.Size = new System.Drawing.Size(372, 34);
             this.textBox1.TabIndex = 3;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -89,7 +89,7 @@ namespace UltiBrowser
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(135, 105);
+            this.button1.Location = new System.Drawing.Point(141, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 35);
             this.button1.TabIndex = 4;
@@ -101,7 +101,7 @@ namespace UltiBrowser
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(336, 105);
+            this.button2.Location = new System.Drawing.Point(342, 103);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 35);
             this.button2.TabIndex = 5;
