@@ -28,6 +28,7 @@ namespace UltiBrowser
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.access = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Bookmarks = new System.Windows.Forms.ToolStripMenuItem();
@@ -233,6 +234,7 @@ namespace UltiBrowser
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.access);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(675, 455);
             this.Name = "Form1";
