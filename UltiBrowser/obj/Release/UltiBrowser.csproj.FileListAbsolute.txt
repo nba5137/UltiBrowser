@@ -1,0 +1,10 @@
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\bin\Release\UltiBrowser.exe.config
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\bin\Release\UltiBrowser.exe
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\bin\Release\UltiBrowser.pdb
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.Form1.resources
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.Form2.resources
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.Form3.resources
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.Properties.Resources.resources
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.csproj.GenerateResource.Cache
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.exe
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.pdb
