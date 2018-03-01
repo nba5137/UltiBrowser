@@ -114,7 +114,7 @@ namespace UltiBrowser
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(703, 30);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "http://";
+            this.textBox1.Text = "about:blank";
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // webBrowser1
@@ -180,7 +180,7 @@ namespace UltiBrowser
             this.button1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(112, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 25);
+            this.button1.Size = new System.Drawing.Size(200, 28);
             this.button1.TabIndex = 7;
             this.button1.Text = "Add to Bookmarks";
             this.button1.UseVisualStyleBackColor = true;
@@ -211,10 +211,11 @@ namespace UltiBrowser
             this.button2.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(320, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 25);
+            this.button2.Size = new System.Drawing.Size(200, 28);
             this.button2.TabIndex = 10;
             this.button2.Text = "Set Homepage";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

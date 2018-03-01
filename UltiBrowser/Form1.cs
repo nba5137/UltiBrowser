@@ -118,9 +118,20 @@ namespace UltiBrowser
         }
 
         // Homepage
+        public static string home_index = "about:blank";
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Add form2 as bookmarks window. 
+            Form3 set_hp = new Form3(this);
+            set_hp.Show();
+            // Disable this button once form2 open. 
+            button2.Enabled = false;
+        }
+
         private void home_Click(object sender, EventArgs e)
         {
-            webBrowser1.GoHome();
+            webBrowser1.Navigate(home_index);
         }
 
         /// <summary>
@@ -210,6 +221,11 @@ namespace UltiBrowser
             // Enable add button after closing form2. 
             button1.Enabled = true;
         }
+        public void Renable_2()
+        {
+            // Enable add button after closing form3. 
+            button2.Enabled = true;
+        }
 
         /// <summary>
         /// Check_Dict function. Used as checking index according to bookmark name.
@@ -227,5 +243,6 @@ namespace UltiBrowser
                 }
             }
         }
+
     }
 }

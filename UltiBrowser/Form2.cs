@@ -55,6 +55,7 @@ namespace UltiBrowser
             add_case();
         }
 
+        // Press Enter in any textbox will go to add case. 
         private void Bm_name_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)ConsoleKey.Enter)
@@ -70,8 +71,5 @@ namespace UltiBrowser
                 add_case();
             }
         }
-
-        // Press Enter in any textbox will go to add case. 
-
     }
 }
