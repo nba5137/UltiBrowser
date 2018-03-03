@@ -14,8 +14,10 @@ namespace UltiBrowser
 {
     public partial class Form1 : Form
     {
-        //Setup Dict for bookmarks
+        // Setup Dict for bookmarks
         public static Dictionary<string, string> Bookmark = new Dictionary<string, string>();
+        // Setup string for homepage
+        public static string home_index;
 
         public Form1()
         {
@@ -23,12 +25,27 @@ namespace UltiBrowser
             // Creating a file for storing 
             if (!File.Exists("fav"))
             {
-                System.IO.FileStream newfile = System.IO.File.Create("fav");
+                FileStream newfile = File.Create("fav");
                 newfile.Close();
+            }
+
+            if (!File.Exists("hp"))
+            {
+                FileStream newfile_2 = File.Create("hp");
+                newfile_2.Close();
             }
             // Reading from the file
             Bookmark = new JavaScriptSerializer()
                 .Deserialize<Dictionary<string, string>>(File.ReadAllText("fav"));
+
+            StreamReader home_file =
+                new StreamReader("hp");
+            home_index = home_file.ReadLine();
+            if (home_index == null)
+            {
+                home_index = "about:blank";
+            }
+            home_file.Close();
             // Adding to menustripitem 
             Add_pages();
         }
@@ -134,7 +151,6 @@ namespace UltiBrowser
         }
 
         // Homepage
-        public static string home_index = "about:blank";
 
         private void button2_Click(object sender, EventArgs e)
         {

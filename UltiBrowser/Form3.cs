@@ -32,11 +32,17 @@ namespace UltiBrowser
             InitializeComponent();
             // Set form1
             this._f1 = f1;
+            textBox1.Text = Form1.home_index;
         }
 
         private void setting()
         {
             Form1.home_index = textBox1.Text;
+            // writting to the file.
+            System.IO.StreamWriter home_set = new System.IO.StreamWriter("hp");
+            home_set.Write(Form1.home_index);
+            home_set.Close();
+            //System.IO.File.WriteAllText(home_set, Form1.home_index);
             this.Close();
             // Enable add button after closing form3. 
             this._f1.Renable_2();
