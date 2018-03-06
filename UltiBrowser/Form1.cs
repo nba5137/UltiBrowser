@@ -231,7 +231,10 @@ namespace UltiBrowser
                     if (repeat == false)
                     {
                         Bookmarks.DropDownItems.Add(new_item);
-                        // after added new item, add click event to it. 
+                        // after added new item, add Edit option to it.
+                        ToolStripMenuItem new_one = Bookmarks.DropDownItems[count] as ToolStripMenuItem;
+                        new_one.DropDownItems.Add("Edit");
+                        // and then add click event to it. 
                         Bookmarks.DropDownItems[count].Click += new EventHandler(Check_Dict);
                     }
                     else
