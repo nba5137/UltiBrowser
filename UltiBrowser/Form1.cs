@@ -48,6 +48,7 @@ namespace UltiBrowser
                 home_index = "about:blank";
             }
             home_file.Close();
+            webBrowser1.Navigate(home_index);
             // Adding to menustripitem 
             Add_pages();
             // Hiding script errors
