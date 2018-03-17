@@ -18,6 +18,8 @@ namespace UltiBrowser
         public static Dictionary<string, string> Bookmark = new Dictionary<string, string>();
         // Setup string for homepage
         public static string home_index;
+        public static string name_to_edit;  //use to get bookmark_name in Form4 and check in dict for updating
+        public static string index_to_edit;
 
         public Form1()
         {
@@ -181,6 +183,28 @@ namespace UltiBrowser
             button1.Enabled = false;
         }
 
+        /// <summary>
+        /// Edit case. For delete or modify bookmarks
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            // form4 as Edit_Bookmarks window.
+            ToolStripMenuItem loc = (ToolStripMenuItem)sender;
+            name_to_edit = loc.OwnerItem.Text;
+            for (int i = 0; i < Bookmark.Count; i++)
+            {
+                if (name_to_edit == Bookmark.Keys.ElementAt(i))
+                {
+                    index_to_edit = Bookmark[Bookmark.Keys.ElementAt(i)];
+                }
+            }
+            Form4 edit_bookmarks = new Form4(this);
+            edit_bookmarks.Show();
+            Bookmarks.Enabled = false;
+        }
 
         // Update bookmarks by clicking Bookmarks button
         /*
@@ -231,9 +255,12 @@ namespace UltiBrowser
                     if (repeat == false)
                     {
                         Bookmarks.DropDownItems.Add(new_item);
+                        Bookmarks.DropDownItems[count].Name = new_item;
                         // after added new item, add Edit option to it.
                         ToolStripMenuItem new_one = Bookmarks.DropDownItems[count] as ToolStripMenuItem;
                         new_one.DropDownItems.Add("Edit");
+                        ToolStripMenuItem for_add_edit = new_one.DropDownItems[0] as ToolStripMenuItem;
+                        for_add_edit.Click += new EventHandler(Edit_Click);
                         // and then add click event to it. 
                         Bookmarks.DropDownItems[count].Click += new EventHandler(Check_Dict);
                     }
@@ -246,7 +273,13 @@ namespace UltiBrowser
                 else
                 {
                     Bookmarks.DropDownItems.Add(new_item);
+                    Bookmarks.DropDownItems[0].Name = new_item;
                     Bookmarks.DropDownItems[0].Click += new EventHandler(Check_Dict);
+                    // Add Edit option to it. 
+                    ToolStripMenuItem new_one = Bookmarks.DropDownItems[0] as ToolStripMenuItem;
+                    new_one.DropDownItems.Add("Edit");
+                    ToolStripMenuItem for_add_edit = new_one.DropDownItems[0] as ToolStripMenuItem;
+                    for_add_edit.Click += new EventHandler(Edit_Click);
                 }
             }
             // Writing into the file "fav" for storing  
@@ -264,6 +297,11 @@ namespace UltiBrowser
             // Enable add button after closing form3. 
             button2.Enabled = true;
         }
+        public void Renable_3()
+        {
+            // Enable add button after closing form3. 
+            Bookmarks.Enabled = true;
+        }
 
         /// <summary>
         /// Check_Dict function. Used as checking index according to bookmark name.
@@ -280,6 +318,28 @@ namespace UltiBrowser
                     webBrowser1.Navigate(Bookmark[Bookmark.Keys.ElementAt(i)]);
                 }
             }
+        }
+
+        /// <summary>
+        /// Update url for same bookmark name. 
+        /// </summary>
+        public void Update()
+        {
+            Bookmark[name_to_edit] = index_to_edit;
+            // Writing into the file "fav" for storing  
+            File.WriteAllText("fav", new JavaScriptSerializer().Serialize(Bookmark));
+        }
+
+        /// <summary>
+        /// Delete the chosen bookmark
+        /// </summary>
+        public void Delete()
+        {
+            Bookmarks.DropDownItems.RemoveByKey(name_to_edit);
+            // also delete from the dictionary.
+            Bookmark.Remove(name_to_edit);
+            // Writing into the file "fav" for storing  
+            File.WriteAllText("fav", new JavaScriptSerializer().Serialize(Bookmark));
         }
 
     }
