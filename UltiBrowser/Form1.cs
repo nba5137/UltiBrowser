@@ -50,6 +50,8 @@ namespace UltiBrowser
             home_file.Close();
             // Adding to menustripitem 
             Add_pages();
+            // Hiding script errors
+            webBrowser1.ScriptErrorsSuppressed = true;
         }
 
         /// <summary>

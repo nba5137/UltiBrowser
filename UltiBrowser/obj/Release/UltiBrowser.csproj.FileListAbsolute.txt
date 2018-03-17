@@ -9,3 +9,4 @@ C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBr
 C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.exe
 C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.pdb
 C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.csprojResolveAssemblyReference.cache
+C:\Users\nba51\OneDrive\文档\GitHub\UltiBrowser\UltiBrowser\obj\Release\UltiBrowser.Form4.resources
