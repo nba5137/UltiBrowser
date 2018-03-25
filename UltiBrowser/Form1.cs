@@ -15,11 +15,11 @@ namespace UltiBrowser
     public partial class Form1 : Form
     {
         // Setup Dict for bookmarks
-        public static Dictionary<string, string> Bookmark = new Dictionary<string, string>();
+        public Dictionary<string, string> Bookmark = new Dictionary<string, string>();
         // Setup string for homepage
-        public static string home_index;
-        public static string name_to_edit;  //use to get bookmark_name in Form4 and check in dict for updating
-        public static string index_to_edit;
+        public string home_index;
+        public string name_to_edit;  //use to get bookmark_name in Form4 and check in dict for updating
+        public string index_to_edit;
 
         public Form1()
         {

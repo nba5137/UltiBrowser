@@ -30,10 +30,10 @@ namespace UltiBrowser
         public Form4(Form1 f1)
         {
             InitializeComponent();
-            Bm_name.Text = Form1.name_to_edit;
-            Bm_url.Text = Form1.index_to_edit;
             // Set form1
             this._f1 = f1;
+            Bm_name.Text = this._f1.name_to_edit;
+            Bm_url.Text = this._f1.index_to_edit;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,16 +50,16 @@ namespace UltiBrowser
 
         private void update_bm()
         {
-            if (!Form1.Bookmark.ContainsKey(Bm_name.Text))
+            if (!this._f1.Bookmark.ContainsKey(Bm_name.Text))
             {
-                Form1.Bookmark.Add(Bm_name.Text, Bm_url.Text);
+                this._f1.Bookmark.Add(Bm_name.Text, Bm_url.Text);
                 // Calling Add_pages function in form 1. 
                 this._f1.Delete();
                 this._f1.Add_pages();
             }
             else
             {
-                Form1.index_to_edit = Bm_url.Text;
+                this._f1.index_to_edit = Bm_url.Text;
                 this._f1.Update();
             }
             this.Close();

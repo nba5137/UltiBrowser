@@ -55,10 +55,10 @@ namespace UltiBrowser
         /// <param name="e"></param>
         private void add_case()
         {
-            if (Form1.Bookmark == null)
+            if (this._f1.Bookmark == null)
             {
-                Form1.Bookmark = new Dictionary<string, string>();
-                Form1.Bookmark[Bm_name.Text] = textBox1.Text;
+                this._f1.Bookmark = new Dictionary<string, string>();
+                this._f1.Bookmark[Bm_name.Text] = textBox1.Text;
                 // Calling Add_pages function in form 1. 
                 this._f1.Add_pages();
                 this.Close();
@@ -67,9 +67,9 @@ namespace UltiBrowser
             }
             else
             {
-                if (!Form1.Bookmark.ContainsKey(Bm_name.Text))
+                if (!this._f1.Bookmark.ContainsKey(Bm_name.Text))
                 {
-                    Form1.Bookmark.Add(Bm_name.Text, textBox1.Text);
+                    this._f1.Bookmark.Add(Bm_name.Text, textBox1.Text);
                     // Calling Add_pages function in form 1. 
                     this._f1.Add_pages();
                     this.Close();
